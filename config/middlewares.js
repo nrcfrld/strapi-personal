@@ -6,13 +6,18 @@ module.exports = ({ env }) => [
       contentSecurityPolicy: {
         directives: {
           "default-src": ["'self'"],
-          "img-src": ["'self'", "data:", "blob:", env("SUPABASE_API_URL"), "*"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            env("SUPABASE_API_URL"),
+            "strapi.io",
+          ],
           "script-src": ["'self'", "'unsafe-inline'", env("SUPABASE_API_URL")],
         },
       },
     },
   },
-  "strapi::security",
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::logger",
