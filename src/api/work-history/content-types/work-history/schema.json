@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_histories",
+  "info": {
+    "singularName": "work-history",
+    "pluralName": "work-histories",
+    "displayName": "Work History",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "duration": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "sequence": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    }
+  }
+}
